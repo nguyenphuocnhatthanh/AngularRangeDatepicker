@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Index</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/daterangepicker-bs3.css"/>
+</head>
+<body ng-app="app">
+	
+	<div ng-controller="TestCtrl">
+<input date-range-picker class="form-control date-picker" type="text" ng-model="datePicker.date" />
+{{datePicker.date.startDate+1 |date:'yyyy-MM-dd HH:mm:ss'}}
+{{datePicker.date.startDate}}
+</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/daterangepicker.js"></script>
+	<script src="js/angular-daterangepicker.min.js"></script>
+	<script>
+	var app = angular.module('app', ['daterangepicker']);
+	app.controller('TestCtrl', ['$scope', function($scope){
+
+	}])
+	</script>
+</body>
+</html>
